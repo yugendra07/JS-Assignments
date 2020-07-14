@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>
+            Day 2 Assignment 3 : Print Current Date
+        </title>
+    </head>
+    <body>
+        <script>
+            var curday1 = function(sp)
+            {
+                today = new Date();
+                var dd = today.getDate();
+                var mm = today.getMonth()+1; //As January is 0.
+                var yyyy = today.getFullYear();
+
+                if(dd<10) dd='0'+dd;
+                if(mm<10) mm='0'+mm;
+                return (mm+sp+dd+sp+yyyy);
+            };
+            var curday2 = function(sp)
+            {
+                today = new Date();
+                var dd = today.getDate();
+                var mm = today.getMonth()+1; //As January is 0.
+                var yyyy = today.getFullYear();
+
+                if(dd<10) dd='0'+dd;
+                if(mm<10) mm='0'+mm;
+                return (dd+sp+mm+sp+yyyy);
+            };
+            document.write('Output format mm/dd/yyyy :');
+            document.write("<br>");
+            document.write(curday1('/'));
+            document.write("<br>"); 
+            document.write('Output format mm-dd-yyyy :');
+            document.write("<br>");
+            document.write(curday1('-'));
+            document.write("<br>"); 
+            document.write('Output format dd/mm/yyyy :');
+            document.write("<br>");
+            document.write(curday2('/'));
+            document.write("<br>"); 
+            document.write('Output format dd-mm-yyyy :');
+            document.write("<br>");
+            document.write(curday2('-'));   
+        </script>
+    </body>
+</html>
